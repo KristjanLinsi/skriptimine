@@ -1,5 +1,5 @@
 * Root kasutajana:
-intalli - apt-get install git
+installi - apt-get install git
 * tavakasutajana:
 esmaskordselt:
 
@@ -16,11 +16,12 @@ cd skriptimine
 
 d) tekita lokaalne repositoorium git susteemi jaoks antud kaustas
 git init
- 
-#
 
-faili iga muudatuse korral:
-1) git status - kontolli, et fail on muudetus
-2) git add failinimi lisa muudetud fail järgminsele
-3) git commit -m "" koosta muutatuse kirjeldus
-4) git log - kontrolli, et muudatus on salvestatud
+remote seadistamine:
+
+a) git remote add nimi aadress
+git remote add skripimine https://github.com/kasutajanimi/reponimi.git
+
+b) git remote kontroll
+git remote -v
+
