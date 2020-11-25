@@ -1,0 +1,29 @@
+#!/bin/bash
+#Koosta skript, mis küsib kasutaja käest tema vanus. Skript peab väljastama seletava kirjelduse,
+#kes sa oled vastavalt sisestatud vanusele. Kui sisestatud vanus on 0 kuni 11, oled laps,
+#kui 11 kuni 18, oled nooruk, kui 18 kuni 63 – täiskasvanu ning alates 63-st oled senjoor.
+#Juhul, kui sisestatakse vale väärtus, näiteks vanus on 17 miinusmärgiga, siis väljastatakse veateade.
+
+echo "Siseta oma vanus:?"
+read vanus
+
+#Küsi kasutaja käest vanuse väärtus ja salvesta vanuse väärtus muutuja sisse.
+	if test $vanus -gt 0 -a $vanus -lt 11
+	then 
+        	echo "oled laps"
+	elif test $vanus -ge 11 -a $vanus -lt 18
+	then
+        	echo "oled nooruk"
+	elif test $vanus -ge 18 -a $vanus -lt 63
+	then
+        	echo "oled täiskasvanu"
+	elif test $vanus -ge 63 -a $vanus -lt 90
+	then
+        	echo "oled senioor"
+	elif test $vanus -ge 90 -a $vanus -lt 120
+	then 
+		echo "Oled päris vana"
+	else
+
+        	echo "vigane sisend"
+	fi
