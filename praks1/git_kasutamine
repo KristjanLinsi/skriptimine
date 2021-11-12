@@ -25,3 +25,15 @@ git status
 
 6. Koosta jalgimise failile commit -muudatuse kirjelduse 
 git commit -m "muudatuse sonaline kirjeldus" 
+
+---- remote - tee korraks, et tekitada repo ja yhendus ----
+
+7. Loo repo githubis - git@hub.com:kasutaja/reponimi.git
+
+8. Loo remote ühendus githubi repoga 
+git remote add yhundusenimi git@github.com:kasutajanimi/reopnimi.git
+
+git remote -v
+
+---- 9. Lykka lokaalsed muudatused githubi
+git puch -uf reponimi master
