@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Koosta script, mis valjastab kasutajale tervitust “Tere, kasutajanimi !”.
+
+
+#echo "Tere kasutajanimi!"
+# Yl1
+# $User naitab kasutajat kes praesgu on sees.
+echo -n "Tere,"
+echo -n `whoami | cut -c1 | tr [a-z] [A-Z]`
+echo -n `whoami | cut -c2-`
+echo "!"

@@ -1,39 +1,43 @@
 1. Kui git ei ole paigaldatud - paigalda
-* Root kasutajana:
-installi - apt-get install git
-2. * tavakasutajana:
-esmaskordselt:
+su root
+apt install git
+exit
 
-3. a) seadista- maara kasutajanimi, email, editor
-git config -- global user.name "Eesnimi Perenimi"
-git config --global user.email kasutajanimi@khk.ee
+2. Konfigureeri oma kasutaja alt
+git config --global user.name "OmaEes Perenimi"
+git config --global user.email omameil@khk.ee
 git config --global core.editor nano
-   b) loo kataloog, kus hakkad skriptima
+
+3. Loo kaust, mille failid vajavad jälgimist
 mkdir skriptimine
-   c) sisene antud kausta
- $cd skriptimine
-   d) tekita lokaalne repositoorium git susteemi jaoks antud kaustas
-$git init
 
----4-6. punktid teeme korduvalt iga muudatuse tekkimisel ---
+4. Sisene antud kataloogi
+cd skriptimine
 
-4. Kui failis on tehtud muudatused - lisme faili jalgimisele
-git add failinime [failinimi2 failinimed] voib olla mittu faili
+5. Tee lokaalne git repo antud kaustas muudatuste jälgimiseks
+git init
 
-5. Eelmise tegevuse kontrollimiseks voib vaadata faili jalgimisestaatust 
+--- 6-8. punktid teeme koduvalt iga muudatuse tekkimisel ---
+
+6. Kui failis on tehtud muudatused - lisame fail jälgimisele
+git add failinimi [ failinimi2 failinimiN]
+
+7. Eelmise tegevuse kontrollimiseks võib vaadata faili jälgimisstaatust
 git status
 
-6. Koosta jalgimise failile commit -muudatuse kirjelduse 
-git commit -m "muudatuse sonaline kirjeldus" 
+8. Koosta jälgitavale failile commit - muudatuse kirjelduse
+git commit -m "muudatuse sõneline kirjeldus"
 
----- remote - tee korraks, et tekitada repo ja yhendus ----
+--- 9-10 remote - teeme üks kord, et tekitada repo ja ühendus ---
+ 
+9. loo repo githubis - git@github.com:kasutaja/reponimi.git
 
-7. Loo repo githubis - git@hub.com:kasutaja/reponimi.git
-
-8. Loo remote ühendus githubi repoga 
-git remote add yhundusenimi git@github.com:kasutajanimi/reopnimi.git
+10. loo remote ühendus githubi repoga
+git remote add ühendusenimi git@github.com:kasutaja/reponimi.git
 
 git remote -v
 
----- 9. Lykka lokaalsed muudatused githubi
-git puch -uf reponimi master
+--- 11 remote - teeme korduvalt iga commit sooritamise parast ---
+
+11. Lükka lokaalsed muudatused githubi
+git push -uf yhendusenimi master
