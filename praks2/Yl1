@@ -1,0 +1,8 @@
+#!/bin/bash
+#Koosta script, mis valjastab kasutajale tervitust  ^`^|Tere, kasutajanimi ! ^$
+#echo "Tere kasutajanimi!"
+# Yl1
+# $User naitab kasutajat kes praesgu on sees.
+echo -n "Tere,"
+echo `whoami`
+echo "!"
